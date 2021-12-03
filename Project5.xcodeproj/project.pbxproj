@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5DFC88902759B29C00E7F01B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC888F2759B29C00E7F01B /* main.cpp */; };
+		5DFC889A2759BD9C00E7F01B /* StreetNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC88982759BD9C00E7F01B /* StreetNode.cpp */; };
+		5DFC889D2759BF1E00E7F01B /* Intersection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC889B2759BF1E00E7F01B /* Intersection.cpp */; };
+		5DFC88A02759C62900E7F01B /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC889E2759C62900E7F01B /* Map.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +29,12 @@
 		5DFC888C2759B29C00E7F01B /* Project5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Project5; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC888F2759B29C00E7F01B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5DFC88962759BADB00E7F01B /* data.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.dat; sourceTree = "<group>"; };
+		5DFC88982759BD9C00E7F01B /* StreetNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StreetNode.cpp; sourceTree = "<group>"; };
+		5DFC88992759BD9C00E7F01B /* StreetNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreetNode.h; sourceTree = "<group>"; };
+		5DFC889B2759BF1E00E7F01B /* Intersection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection.cpp; sourceTree = "<group>"; };
+		5DFC889C2759BF1E00E7F01B /* Intersection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Intersection.h; sourceTree = "<group>"; };
+		5DFC889E2759C62900E7F01B /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		5DFC889F2759C62900E7F01B /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,14 @@
 		5DFC88832759B29C00E7F01B = {
 			isa = PBXGroup;
 			children = (
+				5DFC889E2759C62900E7F01B /* Map.cpp */,
+				5DFC889F2759C62900E7F01B /* Map.h */,
+				5DFC889B2759BF1E00E7F01B /* Intersection.cpp */,
+				5DFC889C2759BF1E00E7F01B /* Intersection.h */,
+				5DFC88982759BD9C00E7F01B /* StreetNode.cpp */,
+				5DFC88992759BD9C00E7F01B /* StreetNode.h */,
+				5DFC888F2759B29C00E7F01B /* main.cpp */,
+				5DFC88962759BADB00E7F01B /* data.dat */,
 				5DFC88972759BAE900E7F01B /* Test Files */,
 				5DFC888E2759B29C00E7F01B /* Project5 */,
 				5DFC888D2759B29C00E7F01B /* Products */,
@@ -59,7 +76,6 @@
 		5DFC888E2759B29C00E7F01B /* Project5 */ = {
 			isa = PBXGroup;
 			children = (
-				5DFC888F2759B29C00E7F01B /* main.cpp */,
 			);
 			path = Project5;
 			sourceTree = "<group>";
@@ -67,7 +83,6 @@
 		5DFC88972759BAE900E7F01B /* Test Files */ = {
 			isa = PBXGroup;
 			children = (
-				5DFC88962759BADB00E7F01B /* data.dat */,
 			);
 			name = "Test Files";
 			sourceTree = "<group>";
@@ -129,6 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DFC889D2759BF1E00E7F01B /* Intersection.cpp in Sources */,
+				5DFC889A2759BD9C00E7F01B /* StreetNode.cpp in Sources */,
+				5DFC88A02759C62900E7F01B /* Map.cpp in Sources */,
 				5DFC88902759B29C00E7F01B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
