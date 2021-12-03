@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		5DFC888C2759B29C00E7F01B /* Project5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Project5; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFC888F2759B29C00E7F01B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5DFC88962759BADB00E7F01B /* data.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.dat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +42,7 @@
 		5DFC88832759B29C00E7F01B = {
 			isa = PBXGroup;
 			children = (
+				5DFC88972759BAE900E7F01B /* Test Files */,
 				5DFC888E2759B29C00E7F01B /* Project5 */,
 				5DFC888D2759B29C00E7F01B /* Products */,
 			);
@@ -60,6 +62,14 @@
 				5DFC888F2759B29C00E7F01B /* main.cpp */,
 			);
 			path = Project5;
+			sourceTree = "<group>";
+		};
+		5DFC88972759BAE900E7F01B /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DFC88962759BADB00E7F01B /* data.dat */,
+			);
+			name = "Test Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +253,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N24BTS4S42;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INSTALL_PATH = "~/CS163/Project5/Project5";
+				"INSTALL_PATH[sdk=*]" = .;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +265,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N24BTS4S42;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INSTALL_PATH = .;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
