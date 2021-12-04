@@ -20,7 +20,7 @@ public:
   StreetNode* adjList;
   
   /*ConstructorDestructor*/
-  Intersection(char* name);
+  Intersection(const char* name);
   ~Intersection();
   
   /*accessor*/
@@ -32,10 +32,22 @@ public:
   //displays the Intersection to the user
   int display()const;
   
+  int displayStreets()const;
+  
+  //adds a Street to the Intersection
+  //@post toAdd is added to the adjacency list
+  int addStreet(StreetNode& toAdd);
+  
+  int addStreet(const char* name, Intersection* destination);
+  
   
 private:
   /*Private Data Members*/
   char* name;
+  
+  int addStreet(StreetNode*, StreetNode*&);
+  int deleteStreets(StreetNode*);
+  int displayStreets(StreetNode*,int)const;
 };
 
 #endif /* Intersection_h */

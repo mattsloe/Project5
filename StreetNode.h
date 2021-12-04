@@ -25,10 +25,10 @@ public:
   StreetNode* next;
   
   /*ConstructorDestructor*/
-  StreetNode(const Intersection*,const char*,const StreetNode*);
+  StreetNode(Intersection*,const char*,StreetNode*);
   ~StreetNode();
   
-  /*Accessors*/
+  /*AccessorsMutators*/
   //@post dest is populated with the name of the StreetNode
   int getName(char* dest)const;
   

@@ -1,0 +1,4 @@
+NOTES
+-----
+Bugs
+o There's a ghost street when loadFromFile() is used (a copy of Mill St.)

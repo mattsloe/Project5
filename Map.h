@@ -38,9 +38,19 @@ public:
   //a program that allows the client to visually traverse the graph
   int traverse()const;
   
+  //to display the intersections
+  int displayIntersections()const;
+  
+  //to display a specific intersection
+  int displayIntersection(int index)const;
+  
+  //return the number of intersections
+  int getSize()const;
+  
+  
 private:
   /*Data Members*/
-  Intersection* array; //adjacency table
+  Intersection** array; //adjacency table
   int graphSize; //number of Intersections in the graph
   
 };
