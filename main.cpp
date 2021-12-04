@@ -16,6 +16,7 @@ void testIntersection();
 void testMap();
 void loadFromFile(Map&);
 void displayTotalMap(Map&);
+void testTraversal(Map&);
 
 int main() {
 //  testStreetNode();
@@ -32,13 +33,14 @@ int main() {
   m.displayIntersections();
   displayTotalMap(m);
   
+  testTraversal(m);
   
   return 0;
 }
 
 void testStreetNode()
 {
-  StreetNode aStreet(nullptr,"Yolo Street",nullptr);
+  StreetNode aStreet(nullptr,"Yolo Street",nullptr,0);
   aStreet.display();
 }
 
@@ -48,7 +50,7 @@ void testIntersection()
   Intersection aPlace(placeName);
   aPlace.display();
   
-  StreetNode* aStreet = new StreetNode(nullptr,"Yolo Street",nullptr);
+  StreetNode* aStreet = new StreetNode(nullptr,"Yolo Street",nullptr,0);
   aPlace.addStreet(*aStreet);
   aPlace.adjList->display();
 }
@@ -107,7 +109,7 @@ void loadFromFile(Map& m)
       m.addIntersection(buf);
       infile.getline(buf,1000,'\n'); //read in next line
     }
-    infile.ignore(); //ignore the \n
+    //infile.ignore(); //ignore the \n
     //Phase 2
     while(infile.getline(buf,1000,',')){ //repeat until EOF
       infile >> int1;
@@ -131,4 +133,9 @@ void displayTotalMap(Map& m)
   for(int i=0;i<size;i++){
     m.displayIntersection(i);
   }
+}
+
+void testTraversal(Map& m)
+{
+  m.dft(6); //dft from first node
 }

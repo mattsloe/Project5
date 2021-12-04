@@ -38,7 +38,7 @@ public:
   //@post toAdd is added to the adjacency list
   int addStreet(StreetNode& toAdd);
   
-  int addStreet(const char* name, Intersection* destination);
+  int addStreet(const char* name, Intersection* destination,int dstIndex);
   
   
 private:

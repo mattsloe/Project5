@@ -47,12 +47,18 @@ public:
   //return the number of intersections
   int getSize()const;
   
+  //Depth First Traversal
+  //@param index is the starting point for traversal
+  int dft(int index)const;
+  
+  
   
 private:
   /*Data Members*/
   Intersection** array; //adjacency table
   int graphSize; //number of Intersections in the graph
-  
+  int dft(int,bool*)const;
+  int _dft(StreetNode*,bool*)const;
 };
 
 #endif /* Map_h*/

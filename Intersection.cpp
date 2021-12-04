@@ -46,9 +46,9 @@ int Intersection::addStreet( StreetNode& toAdd)
   return 1;
 }
 
-int Intersection::addStreet(const char* name, Intersection* destination)
+int Intersection::addStreet(const char* name, Intersection* destination,int dstIndex)
 {
-  StreetNode* newStreet = new StreetNode(destination,name,nullptr);
+  StreetNode* newStreet = new StreetNode(destination,name,nullptr,dstIndex);
   addStreet(*newStreet);
   return 1;
 }

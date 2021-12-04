@@ -2,3 +2,5 @@ NOTES
 -----
 Bugs
 o There's a ghost street when loadFromFile() is used (a copy of Mill St.)
+  -Fixed! There were extra \n in the tail of the file
+  

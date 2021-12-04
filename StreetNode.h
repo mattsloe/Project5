@@ -23,9 +23,10 @@ public:
   /*Data Members*/
   Intersection* adjacent;
   StreetNode* next;
+  int adj;
   
   /*ConstructorDestructor*/
-  StreetNode(Intersection*,const char*,StreetNode*);
+  StreetNode(Intersection*,const char*,StreetNode*,int);
   ~StreetNode();
   
   /*AccessorsMutators*/

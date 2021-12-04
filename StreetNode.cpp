@@ -9,8 +9,8 @@
 #include <cstring>
 #include <iostream>
 
-StreetNode::StreetNode(Intersection* destination,const char* name,StreetNode* nextStreet)
-  :streetName(new char[strlen(name)+1]),adjacent(destination),next(nextStreet)
+StreetNode::StreetNode(Intersection* destination,const char* name,StreetNode* nextStreet,int _adj)
+  :streetName(new char[strlen(name)+1]),adjacent(destination),next(nextStreet),adj(_adj)
 {
   strcpy(streetName,name);
 }

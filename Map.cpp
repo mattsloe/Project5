@@ -48,8 +48,8 @@ int Map::addStreet(const char* name, int intersection1, int intersection2)
     std::cout << "Invalid Intersection!" << std::endl;
     return 0;
   }
-  array[intersection1]->addStreet(name,array[intersection2]);
-  array[intersection2]->addStreet(name,array[intersection1]);
+  array[intersection1]->addStreet(name,array[intersection2],intersection2);
+  array[intersection2]->addStreet(name,array[intersection1],intersection1);
   return 1;
 }
 
@@ -82,4 +82,50 @@ int Map::displayIntersection(int index)const
 int Map::getSize()const
 {
   return graphSize;
+}
+
+int Map::dft(int index)const
+{
+  index--; //change to 0-index
+  if(index < 0 || index >= graphSize){ //check bounds
+    std::cout << "Index out of bounds." << std::endl;
+    return 0;
+  }
+  bool* visited = new bool[graphSize];
+  for(int i=0;i<graphSize;i++){
+    visited[i] = false; //initialize the array
+  }
+  dft(index,visited);
+  delete[] visited;
+  return 1;
+}
+
+//for visiting an Intersection
+int Map::dft(int i,bool* visited)const
+{
+  //mark as visited and print
+  visited[i] = true;
+  array[i]->display();
+  std::cout << "->";
+  
+  //recursion
+  //for all of the edges
+  return _dft(array[i]->adjList,visited);
+}
+
+int Map::_dft(StreetNode* edge,bool* visited)const
+{
+  //Base: edge=null
+  if(!edge)return 0;
+  //if not visited, dft this intersection
+  if(!visited[edge->adj]){
+    std::cout<<'[';
+    edge->display();
+    std::cout << "]->";
+    dft(edge->adj,visited);
+  }else{
+    std::cout << "\n<<==";
+  }
+  //dft the next edge
+  return _dft(edge->next,visited);
 }
